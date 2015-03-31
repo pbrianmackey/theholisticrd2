@@ -1,0 +1,11 @@
+extends layout
+block content
+  h1= title
+  p This is an express app using layouts!
+  if error
+    p.error= error
+
+  div(class='row')
+    div(class='list-group col-lg-6')
+      each val in results
+        a(href="#{val.notes[0].note}" class='list-group-item list-group-item-info') #{val.name}
